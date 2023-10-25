@@ -24,5 +24,5 @@ RUN python3 -m venv /opt/venv
 RUN /opt/venv/bin/pip install gunicorn
 RUN /opt/venv/bin/pip install -r /app/requirements.txt
 
-RUN chmod +x entrypoint.sh
+#RUN chmod +x entrypoint.sh
 CMD [ "/opt/venv/bin/gunicorn","-k uvicorn.workers.UvicornWorker","app:app","--bind","0.0.0.0:8000" ]
