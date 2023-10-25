@@ -25,4 +25,4 @@ RUN /opt/venv/bin/pip install gunicorn
 RUN /opt/venv/bin/pip install -r /app/requirements.txt
 
 RUN chmod +x entrypoint.sh
-CMD ["./entrypoint.sh"]
+CMD [ "/opt/venv/bin/gunicorn","-k uvicorn.workers.UvicornWorker","app:server","--bind","0.0.0.0:8000" ]
