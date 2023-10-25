@@ -1,0 +1,6 @@
+fastapi
+jinja2
+python-multipart
+uvicorn
+gunicorn
+gevent>=1.4
