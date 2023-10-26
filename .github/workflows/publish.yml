@@ -25,7 +25,7 @@ jobs:
         id: build-push-api
         uses: docker/build-push-action@v3
         with:
-          context: ../frontend
+          context: .
           file: Dockerfile
           push: true
           tags: prashrex/html-front:latest
